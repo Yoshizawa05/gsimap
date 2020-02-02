@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <style>
-    body { margin: 0; font-family: sans-serif; text-align: center; }
-    .photo { width="193 height="130"}
+    body { margin: 0; font-family: sans-serif; text-align: center; width:193px, height:130px }
 </style>
 
 <body> 
 
-<!-- <img width="600" hight="600"> -->
-		 
- <a href="javascript:imageChanger(-1)">前へ</a> <img src="image/1.png" name="sushi"> <a href="javascript:imageChanger(1)">次へ</a>
-<script type="text/javascript">
+<!-- <img width="600" hight="600"> --> 
+
 imgFile = new Array("image/1.png","image/2.png","image/3.png","image/4.png","image/5.png","image/6.png",
                     "image/7.png","image/8.png","image/9.png","image/10.png","image/11.png,
                     "image/12.png","image/13.png","image/14.png","image/15.png","image/16.png"); //*1
+	
+ <a href="javascript:imageChanger(-1)">前へ</a> <img src="image/1.png" name="sushi"> <a href="javascript:imageChanger(1)">次へ</a>
+<script type="text/javascript">
+	
 count = 0; //*2
 function imageChanger(num) {
 	//切替番号
