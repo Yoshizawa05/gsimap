@@ -8,16 +8,29 @@
    <body> 
 
    <img width="600" hight-"600">
-   <img src="image/1_ホームからのエスカレータ.png" alt="写真" class="photo" >
-      <div id="nextback">
-    <input type="button" onclick="history.back()" value="戻る">
-    <input type="button" onclick="location.href='./map2.html'" value="次へ">
-      </div>
-        <img src="image/2_西改札.png" alt="写真" class="photo">
-         <img src="image/3_改札.png" alt="写真" class="photo">
-          <img src="image/4_地上までのEV.png" alt="写真" class="photo">
-       <img src="image/5_地上までのエスカレータ.png" alt="写真" class="photo">
-       <img src="image/6_地上出口.png" alt="写真" class="photo">
+         <a href="javascript:imageChanger(-1)">前へ</a> <img src="image/1.pin" name="sushi"> <a href="javascript:imageChanger(1)">次へ</a>
+<script type="text/javascript">
+imgFile = new Array("image/1.pin","image/2.pin","image/3.pin","image/4.pin","image/5.pin","image/6.pin","image/7.pin",
+                    "image/7.pin","image/8.pin","image/9.pin","image/10.pin","image/11.pin,
+                    "image/12.pin","image/13.pin","image/14.pin","image/15.pin","image/16.pin"); //*1
+count = 0; //*2
+function imageChanger(num) {
+	//切替番号
+	count += num; //*3
+	//画像の枚数確認
+	if (count >= imgFile.length) count = 0; //*4 枚数を超えるとき
+	if (count < 0) count = imgFile.length - 1; //*5 0番目より小さいとき
+	//画像出力
+	document.sushi.src =imgFile[count]; //*6
+}
+</script>
+   <img src="image/1.png" alt="写真" class="photo" >
+
+        <img src="image/2.png" alt="写真" class="photo">
+         <img src="image/3.png" alt="写真" class="photo">
+          <img src="image/4.png" alt="写真" class="photo">
+       <img src="image/5.png" alt="写真" class="photo">
+       <img src="image/6.png" alt="写真" class="photo">
        <img src="image/7.png" alt="写真" class="photo">
        <img src="image/8.png" alt="写真" class="photo">
        <img src="image/9.png" alt="写真" class="photo">
